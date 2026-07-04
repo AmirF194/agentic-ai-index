@@ -57,9 +57,9 @@ _Build and coordinate agents — single-agent loops to multi-agent workflows._
 - **[microsoft/autogen](https://github.com/microsoft/autogen)** `⭐ 59.5k · Python` — A programming framework for agentic AI
 - **[crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)** `⭐ 54.9k · Python` — Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.
 - **[agno-agi/agno](https://github.com/agno-agi/agno)** `⭐ 41k · Python` — Build, run, and manage agent platforms.
-- **[langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)** `⭐ 36.4k · Python` — Build resilient agents.
+- **[langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)** `⭐ 36.5k · Python` — Build resilient agents.
 - **[openai/openai-agents-python](https://github.com/openai/openai-agents-python)** `⭐ 27.6k · Python` — A lightweight, powerful framework for multi-agent workflows
-- **[agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope)** `⭐ 27.4k · Python` — Build and run agents you can see, understand and trust.
+- **[agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope)** `⭐ 27.5k · Python` — Build and run agents you can see, understand and trust.
 - **[google/adk-python](https://github.com/google/adk-python)** `⭐ 20.4k · Python` — An open-source, code-first Python toolkit for building, evaluating, and deploying sophisticated AI agents with flexibility and control.
 - **[pydantic/pydantic-ai](https://github.com/pydantic/pydantic-ai)** `⭐ 18.2k · Python` — AI Agent Framework, the Pydantic way
 - **[camel-ai/camel](https://github.com/camel-ai/camel)** `⭐ 17.3k · Python` — 🐫 CAMEL: The first and the best multi-agent framework. Finding the Scaling Law of Agents. https://www.camel-ai.org
@@ -146,7 +146,7 @@ _Real-time voice, vision, and multimodal agent frameworks._
 
 _Autonomous research and long-horizon information-gathering agents._
 
-- **[bytedance/deer-flow](https://github.com/bytedance/deer-flow)** `⭐ 76k · Python` — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.
+- **[bytedance/deer-flow](https://github.com/bytedance/deer-flow)** `⭐ 76.1k · Python` — An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.
 - **[assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher)** `⭐ 28.1k · Python` — An autonomous agent that conducts deep research on any data using any LLM providers
 
 ### Platforms & Low-Code
