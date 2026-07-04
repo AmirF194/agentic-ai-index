@@ -1,0 +1,96 @@
+{
+  "$schema": "One curated entry per repo. Humans decide `repo` (owner/name) and `category`; the generator fills in stars/description/language live. Keep sorted by category, then alphabetically. `note` is optional and reserved for future editorial use.",
+  "categories": [
+    "Agent Frameworks & Orchestration",
+    "Coding Agents",
+    "Browser & Computer Use",
+    "Memory & Context",
+    "Tool Use & MCP",
+    "LLM Infrastructure & Gateways",
+    "Observability & Evaluation",
+    "Security & Guardrails",
+    "Voice & Multimodal Agents",
+    "Research Agents",
+    "Platforms & Low-Code",
+    "RAG & Data",
+    "Personal AI Assistants"
+  ],
+  "entries": [
+    { "repo": "crewAIInc/crewAI", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "microsoft/autogen", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "FoundationAgents/MetaGPT", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "langchain-ai/langgraph", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "pydantic/pydantic-ai", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "openai/openai-agents-python", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "Significant-Gravitas/AutoGPT", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "agno-agi/agno", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "camel-ai/camel", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "kyegomez/swarms", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "agentscope-ai/agentscope", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "google/adk-python", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "strands-agents/harness-sdk", "category": "Agent Frameworks & Orchestration" },
+    { "repo": "ruvnet/ruflo", "category": "Agent Frameworks & Orchestration" },
+
+    { "repo": "OpenHands/OpenHands", "category": "Coding Agents" },
+    { "repo": "aaif-goose/goose", "category": "Coding Agents" },
+    { "repo": "SWE-agent/SWE-agent", "category": "Coding Agents" },
+    { "repo": "Aider-AI/aider", "category": "Coding Agents" },
+    { "repo": "gptme/gptme", "category": "Coding Agents" },
+    { "repo": "cline/cline", "category": "Coding Agents" },
+    { "repo": "continuedev/continue", "category": "Coding Agents" },
+    { "repo": "oraios/serena", "category": "Coding Agents" },
+
+    { "repo": "browser-use/browser-use", "category": "Browser & Computer Use" },
+    { "repo": "microsoft/playwright-mcp", "category": "Browser & Computer Use" },
+    { "repo": "e2b-dev/E2B", "category": "Browser & Computer Use" },
+
+    { "repo": "mem0ai/mem0", "category": "Memory & Context" },
+    { "repo": "letta-ai/letta", "category": "Memory & Context" },
+    { "repo": "topoteretes/cognee", "category": "Memory & Context" },
+    { "repo": "thedotmack/claude-mem", "category": "Memory & Context" },
+
+    { "repo": "modelcontextprotocol/servers", "category": "Tool Use & MCP" },
+    { "repo": "aipotheosis-labs/aci", "category": "Tool Use & MCP" },
+    { "repo": "upstash/context7", "category": "Tool Use & MCP" },
+
+    { "repo": "BerriAI/litellm", "category": "LLM Infrastructure & Gateways" },
+    { "repo": "run-llama/llama_index", "category": "LLM Infrastructure & Gateways" },
+    { "repo": "langchain-ai/langchain", "category": "LLM Infrastructure & Gateways" },
+    { "repo": "stanfordnlp/dspy", "category": "LLM Infrastructure & Gateways" },
+    { "repo": "Mirascope/mirascope", "category": "LLM Infrastructure & Gateways" },
+    { "repo": "ollama/ollama", "category": "LLM Infrastructure & Gateways" },
+
+    { "repo": "langfuse/langfuse", "category": "Observability & Evaluation" },
+    { "repo": "Arize-ai/phoenix", "category": "Observability & Evaluation" },
+    { "repo": "openlit/openlit", "category": "Observability & Evaluation" },
+    { "repo": "promptfoo/promptfoo", "category": "Observability & Evaluation" },
+    { "repo": "confident-ai/deepeval", "category": "Observability & Evaluation" },
+    { "repo": "traceloop/openllmetry", "category": "Observability & Evaluation" },
+
+    { "repo": "protectai/llm-guard", "category": "Security & Guardrails" },
+    { "repo": "NVIDIA-NeMo/Guardrails", "category": "Security & Guardrails" },
+    { "repo": "guardrails-ai/guardrails", "category": "Security & Guardrails" },
+
+    { "repo": "pipecat-ai/pipecat", "category": "Voice & Multimodal Agents" },
+    { "repo": "livekit/agents", "category": "Voice & Multimodal Agents" },
+    { "repo": "TEN-framework/ten-framework", "category": "Voice & Multimodal Agents" },
+
+    { "repo": "assafelovic/gpt-researcher", "category": "Research Agents" },
+    { "repo": "bytedance/deer-flow", "category": "Research Agents" },
+
+    { "repo": "langgenius/dify", "category": "Platforms & Low-Code" },
+    { "repo": "n8n-io/n8n", "category": "Platforms & Low-Code" },
+    { "repo": "FlowiseAI/Flowise", "category": "Platforms & Low-Code" },
+    { "repo": "lobehub/lobehub", "category": "Platforms & Low-Code" },
+    { "repo": "open-webui/open-webui", "category": "Platforms & Low-Code" },
+    { "repo": "Mintplex-Labs/anything-llm", "category": "Platforms & Low-Code" },
+
+    { "repo": "infiniflow/ragflow", "category": "RAG & Data" },
+    { "repo": "unclecode/crawl4ai", "category": "RAG & Data" },
+    { "repo": "firecrawl/firecrawl", "category": "RAG & Data" },
+
+    { "repo": "openclaw/openclaw", "category": "Personal AI Assistants" },
+    { "repo": "NousResearch/hermes-agent", "category": "Personal AI Assistants" },
+    { "repo": "JuliusBrussee/caveman", "category": "Personal AI Assistants" }
+  ]
+}

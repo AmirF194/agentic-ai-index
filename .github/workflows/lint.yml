@@ -1,0 +1,48 @@
+name: lint
+
+# On every PR: make sure data/entries.json is valid and the checked-in README
+# matches what the generator would produce, so contributors can't drift.
+on:
+  pull_request:
+    paths:
+      - 'data/entries.json'
+      - 'scripts/generate.mjs'
+      - 'README.md'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate entries.json
+        run: |
+          node -e "
+            const d = require('./data/entries.json');
+            const cats = new Set(d.categories);
+            const seen = new Set();
+            let bad = 0;
+            for (const e of d.entries) {
+              if (!/^[^/\s]+\/[^/\s]+$/.test(e.repo)) { console.error('Bad repo slug:', e.repo); bad++; }
+              if (!cats.has(e.category)) { console.error('Unknown category for', e.repo, '->', e.category); bad++; }
+              const key = e.repo.toLowerCase();
+              if (seen.has(key)) { console.error('Duplicate repo:', e.repo); bad++; }
+              seen.add(key);
+            }
+            console.log(d.entries.length + ' entries checked.');
+            process.exit(bad ? 1 : 0);
+          "
+
+      - name: Check README is up to date
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate.mjs --check

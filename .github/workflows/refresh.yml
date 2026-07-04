@@ -1,0 +1,42 @@
+name: refresh
+
+# The moat: re-fetch every repo's live metadata on a schedule and commit any
+# changes, so the list never goes stale without a human lifting a finger.
+on:
+  schedule:
+    - cron: '17 6 * * 1' # every Monday 06:17 UTC
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Regenerate README from live GitHub data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/generate.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No changes — list already current."
+            exit 0
+          fi
+          git config user.name  "agentic-ai-index-bot"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "chore: weekly auto-refresh of project metadata"
+          git push
