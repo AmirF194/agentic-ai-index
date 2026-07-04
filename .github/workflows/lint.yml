@@ -42,7 +42,6 @@ jobs:
             process.exit(bad ? 1 : 0);
           "
 
-      - name: Check README is up to date
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/generate.mjs --check
+      # Note: we deliberately do NOT diff README against a live re-render here.
+      # Star counts drift constantly, so that check would flap red on every PR.
+      # README freshness is owned by the scheduled `refresh` workflow instead.

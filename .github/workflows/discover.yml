@@ -1,0 +1,42 @@
+name: discover
+
+# Auto-widen the seed: search GitHub for popular agentic repos not yet listed,
+# refresh data/candidates.json, and commit it as a triage queue for maintainers.
+on:
+  schedule:
+    - cron: '31 6 1 * *' # 1st of each month, 06:31 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: discover
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Discover new candidate repos
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/discover.mjs
+
+      - name: Commit candidates if changed
+        run: |
+          if git diff --quiet -- data/candidates.json; then
+            echo "No change to the triage queue."
+            exit 0
+          fi
+          git config user.name  "agentic-ai-index-bot"
+          git config user.email "actions@github.com"
+          git add data/candidates.json
+          git commit -m "chore: refresh discovery triage queue"
+          git push

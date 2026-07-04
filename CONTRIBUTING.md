@@ -26,7 +26,9 @@ If you edit it directly, the next refresh will overwrite you. Instead, edit the 
    ```
 
    If you can't run it, that's fine — a maintainer or the scheduled job will.
-4. Open the PR. CI runs `node scripts/generate.mjs --check` to confirm the list is consistent.
+4. Open the PR. CI validates `data/entries.json` (valid slugs, known categories, no duplicates).
+   The README itself is regenerated automatically when your entry lands on `main`, and again by
+   the weekly refresh — so you don't have to get the rendered output perfect.
 
 ## Inclusion criteria
 

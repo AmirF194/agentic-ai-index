@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.svg" alt="Agentic AI Index" width="100%">
+
 # 🧭 Agentic AI Index
 
 **A curated, always-fresh map of the open-source agentic-AI ecosystem.**
@@ -197,7 +199,8 @@ on a schedule and commits any changes — no human in the loop for upkeep.
 
 ```bash
 node scripts/generate.mjs          # regenerate README.md
-node scripts/generate.mjs --check  # CI: fail if the list is out of date
+node scripts/generate.mjs --check  # verify the list is in sync (maintainer convenience)
+node scripts/discover.mjs          # refresh data/candidates.json (new repos to consider)
 ```
 
 ## Scope
