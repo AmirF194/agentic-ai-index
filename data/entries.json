@@ -84,6 +84,7 @@
     { "repo": "lobehub/lobehub", "category": "Platforms & Low-Code" },
     { "repo": "open-webui/open-webui", "category": "Platforms & Low-Code" },
     { "repo": "Mintplex-Labs/anything-llm", "category": "Platforms & Low-Code" },
+    { "repo": "Ontheia/ontheia", "category": "Platforms & Low-Code" },
 
     { "repo": "infiniflow/ragflow", "category": "RAG & Data" },
     { "repo": "unclecode/crawl4ai", "category": "RAG & Data" },
